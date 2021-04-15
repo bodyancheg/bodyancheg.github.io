@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<title>Бодя</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html {
+			box-sizing: border-box;
+			font-size: 62.5%;
+			scroll-behavior: smooth;
+		}
+
+		@media (max-width: 75em) {
+			html {
+				font-size: 60%;
+			}
+		}
+
+		@media (max-width: 61.25em) {
+			html {
+				font-size: 58%;
+			}
+		}
+
+		@media (max-width: 28.75em) {
+			html {
+				font-size: 55%;
+			}
+		}
+
+		body {
+			font-size: 1.8rem;
+			line-height: 1.4;
+		}
+
+		h1 {
+			font-size: 5rem;
+		}
+
+		h2 {
+			margin-top: 2rem;
+			text-align: center;
+		}
+
+		h3 {
+			margin-top: 3.2rem;
+			font-size: 3rem;
+		}
+
+		p {
+			font-size: 2.4rem;
+		}
+
+		a {
+			text-decoration: none;
+			font-size: 1rem;
+		}
+
+		nav {
+			font-family: 'Oswald', sans-serif;
+			background-color: darkslateblue;
+			align-items: center;
+			justify-content: flex-end;
+			display: flex;
+			position: fixed;
+			width: 100vw;
+			border-bottom: 3px solid black;
+		}
+
+		#nav-list {
+			display: flex;
+			margin-right: 2rem;
+			list-style: none;
+		}
+
+		#nav-list a {
+			color: ivory;
+			display: block;
+			padding: 1.5rem;
+			font-size: 2rem;
+		}
+
+		#nav-list a:hover {
+			background-color: ivory;
+			color: darkslateblue;
+		}
+
+		#welcome-section {
+			font-family: 'Oswald', sans-serif;
+			display: flex;
+			flex-direction: column;
+			width: 98vw;
+			height: 100vh;
+			background-color: #1a1a1a;
+			color: ivory;
+		}
+
+		#welcome-section p {
+			color: darkslateblue;
+			font-weight: lighter;
+			font-style: italic;
+		}
+
+		#welcome-name {
+			height: 50%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		#welcome-name p {
+			font-weight: 600;
+			font-size: 3.4rem;
+			color: #9d95d0;
+		}
+
+		#welcome-contact {
+			margin-left: 3rem;
+			margin-bottom: 3rem;
+			height: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: flex-start;
+		}
+
+		@media (max-width: 70em) {
+			nav {
+				justify-content: center;
+			}
+			.skill-div {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.skill-div {
+				text-align: center;
+			}
+		}
+
+		@media (min-height: 70em) {
+			#nav-list a {
+				font-size: 5.6rem;
+			}
+		}
+
+		.skill-div {
+			display: flex;
+			align-items: center;
+			margin-top: 5rem;
+		}
+
+		#skills-section {
+			font-family: 'Oswald', sans-serif;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding-top: 5rem;
+			color: #1a1a1a;
+		}
+
+		#card {
+			font-family: 'Montserrat', sans-serif;
+			height: 50mm;
+			width: 90mm;
+			margin: 50px;
+			display: flex;
+			flex-direction: column;
+			background-color: #fffff0;
+			background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+			box-shadow: 5px 5px 5px gray;
+			color: #1a1a1a;
+		}
+
+		#card-header {
+			font-size: 12px;
+			display: flex;
+			justify-content: space-between;
+			margin: 15px 10px 0 10px;
+			font-weight: 600;
+			height: 25%;
+		}
+
+		#card-main {
+			font-size:13px;
+			display: flex;
+			flex-direction: column;
+			height: 50%;
+			align-items: center;
+			justify-content: center;
+			line-height: 1em;
+		}
+
+		#card-footer {
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			height: 25%;
+			margin-bottom: 10px;
+		}
+
+		#card-footer p {
+			font-size: 8px;
+		}
+
+		.card-info {
+			font-size: 12px;
+			font-weight: 600;
+		}
+
+		#subtext {
+			font-weight: 600;
+			margin: 0;
+			font-size: 12px;
+			font-variant: small-caps;
+		}
+
+		#text {
+			font-size: 14px;
+			font-weight: 600;
+			font-variant: small-caps;
+		}
+
+		#contact-section {
+			color: #1a1a1a;
+			margin-top: 5rem;
+			font-family: 'Oswald', sans-serif;
+		}
+
+		#info-section {
+			font-family: 'Oswald', sans-serif;
+			display: flex;
+			flex-direction: column;
+			padding-top: 5rem;
+			color: #1a1a1a;
+		}
+
+		.info-div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#img-bateman {
+			display: flex;
+		}
+
+		.skill-img {
+			width: 12rem;
+		}
+
+		.skill-text {
+			margin-left: 2rem;
+		}
+
+		.info-div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.info-div h3 {
+			font-size: 2rem;
+		}
+
+		#bateman-div {
+			display: flex;
+			justify-content: center;
+		}
+
+		.info-ul {
+			color: black;
+			width: 20vw;
+		}
+
+		.info-ul a {
+			font-size: inherit;
+		}
+
+		#footer-contact {
+			display: flex;
+			justify-content: space-around;
+			font-family: 'Oswald', sans-serif;
+		}
+
+		.info-img {
+			width: 12rem;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<nav id="navbar">
+			<ul id="nav-list">
+				<li><a href="#welcome-section">Кто я</a></li>
+				<li><a href="#skills-section">Что умею</a></li>
+				<li><a href="#info-section">О себе</a></li>
+				<li><a href="#contact-section">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id="welcome-section">
+		<div id="welcome-name">
+		<h1>Богдан Чернодаров</h1>
+		<p>Верстальщик HTML/CSS</p>
+		</div>
+		<div id="welcome-contact">
+		<h3>Telegram:</h3>
+		<p>https://t.me/bodyancheg</p>
+		<h3>Email:</h3>
+		<p>bogdan.tchernodarov@gmail.com</p>
+		</div>
+	</section>
+	<section id="skills-section">
+		<h2>ЗНАНИЯ И НАВЫКИ</h2>
+		<div id="skills-list">
+			<div class="skill-div">
+				<img class="skill-img" src="img\HTML5_Logo.png">
+				<div class="skill-text">
+					<h3>HTML/CSS</h3>
+					<p>Владение языками разметки и оформления стилей</p>
+				</div>
+			</div>
+			<div  class="skill-div">
+				<img class="skill-img" src="img\Photoshop_logo.png">
+				<div class="skill-text">
+					<h3>Photoshop, CorelDraw</h3>
+					<p>Владение графическими редакторами и инструментами создания логотипов</p>
+				</div>
+			</div>
+			<div class="skill-div">
+				<img class="skill-img" src="img\C++_Logo.png">
+				<div class="skill-text">
+					<h3>C++</h3>
+					<p>Базовое знание системного языка программирования C++</p>
+				</div>
+			</div>
+			<div class="skill-div">
+				<img class="skill-img" src="img\Office_logo.png">
+				<div class="skill-text">
+					<h3>Word, Excel, PowerPoint</h3>
+					<p>Владение основными программами набора Microsoft Office</p>
+				</div>
+			</div>
+			<div class="skill-div">
+				<img class="skill-img" src="img\SQL_logo.png">
+				<div class="skill-text">
+					<h3>Базовые знания SQL</h3>
+					<p>Составление простых SQL-запросов</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="info-section">
+		<h2>О СЕБЕ</h2>
+			<div class="info-div">
+				<h3>Образование</h3>
+				<img class="info-img" src="http://sun9-63.userapi.com/s/v1/if2/86nlZjcj_VQgktmRTDQeWl2f2wGakA5_xY6iGWsCCQIiSuXKiMpXvdJQqP29KumNsDPaHkb6bzfc5QSXOOjcMGcM.jpg?size=200x0&quality=96&crop=2,2,471,471&ava=1">
+				<ul class="info-ul">
+					<li>Обучаюсь на третьем курсе в Институте Среднего Профессионального Образования при Санкт-Петербургском Политехническом Университете имени Петра Великого</li>
+					<li>Прошел курс <a href="https://www.freecodecamp.org/certification/bodyancheg/responsive-web-design">Responsive Web Design</a> на сайте <a href="https://www.freecodecamp.org/">freecodecamp.org</a></li>
+				</ul>
+
+			</div>
+			<div class="info-div">
+				<h3>Личные качества</h3>
+				<img class="info-img" src="img\meditation_logo.png">
+				<ul class="info-ul">
+					<li>Правильно распределяю своё время</li>
+					<li>Подхожу к задачам со всей серьезностью</li>
+					<li>Умею находить общий язык с людьми</li>
+				</ul>
+			</div>
+			<div class="info-div">
+				<h3>Хобби</h3>
+				<img class="info-img" src="img\hobby_logo.png">
+				<ul class="info-ul">
+					<li>Кинематограф</li>
+					<li>Компьютерные игры (глобальные стратегии и RPG)</li>
+					<li>Анекдоты категории Б+</li>
+				</ul>
+			</div>
+	</section>
+	<section id="contact-section">
+		<h2>КОНТАКТЫ</h2>
+		<div id="bateman-div">
+		<img id="img-bateman" src="img\Patrick_Bateman.png">
+		<div id="card">
+			<header id="card-header">
+				<p class="card-info">+7(911)827-20-07</p>
+				<p class="card-info">ИСПО СПБПУ</p>
+			</header>
+			<main id="card-main">
+				<p id="text">Чернодаров БОГДАН</p>
+				<p id="subtext">Верстальщик HTML/CSS</p>
+			</main>
+			<footer id="card-footer">
+				<p class="card-info">САНКТ-ПЕТЕРБУРГ, ПРОСПЕКТ ЭНГЕЛЬСА, 129 К4</p>
+			</footer>
+		</div>
+		</div>
+	</section>
+	<footer id="footer-contact">
+		<div class="contact">
+		<h3>Telegram:</h3>
+		<p>https://t.me/bodyancheg</p>
+		</div>
+		<div class="contact">
+		<h3>Email:</h3>
+		<p>bogdan.tchernodarov@gmail.com</p>
+		</div>
+	</footer>
+</body>
+</html>
